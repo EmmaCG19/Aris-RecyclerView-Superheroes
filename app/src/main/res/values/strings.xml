@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TutoRecyclerViewAris</string>
+    <string name="btn_delete">BORRAR</string>
 </resources>

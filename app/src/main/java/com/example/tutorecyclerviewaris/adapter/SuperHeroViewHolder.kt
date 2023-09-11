@@ -1,5 +1,6 @@
 package com.example.tutorecyclerviewaris.adapter
 
+import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -10,7 +11,11 @@ class SuperHeroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val binding = ItemSuperheroBinding.bind(itemView)
 
     //This function will be called each time the adapter needs to bind data with the viewholder
-    fun render(superHeroModel: SuperHero, onClickListener: (SuperHero) -> Unit) {
+    fun render(
+        superHeroModel: SuperHero,
+        onClickListener: (SuperHero) -> Unit,
+        onClickDelete: (Int) -> Unit
+    ) {
         binding.tvSuperHeroName.text = superHeroModel.superhero
         binding.tvPublisher.text = superHeroModel.publisher
         binding.tvRealName.text = superHeroModel.realName
@@ -18,6 +23,12 @@ class SuperHeroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         itemView.setOnClickListener {
             onClickListener(superHeroModel)
+        }
+
+        binding.btnDelete.setOnClickListener {
+            //adapterPosition is deprecated, instead of, use bindingAdapterPosition
+            Log.d("ViewHolderSuperHero", "Adapter position selected: $bindingAdapterPosition")
+            onClickDelete(bindingAdapterPosition)
         }
 
     }

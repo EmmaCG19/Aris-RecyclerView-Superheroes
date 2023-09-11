@@ -48,10 +48,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/title_text"
-            android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivSuperHero"
+            app:layout_constraintTop_toBottomOf="@id/tvRealName"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="Marvel" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_delete"
+            android:textColor="@color/white"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@color/background_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

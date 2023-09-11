@@ -8,7 +8,8 @@ import com.example.tutorecyclerviewaris.SuperHero
 
 class SuperHeroAdapter(
     private val superheroList: List<SuperHero>,
-    private val onClickListener: (SuperHero) -> Unit
+    private val onClickListener: (SuperHero) -> Unit,
+    private val onClickDelete: (Int) -> Unit
 ) :
     RecyclerView.Adapter<SuperHeroViewHolder>() {
 
@@ -20,7 +21,7 @@ class SuperHeroAdapter(
 
     override fun onBindViewHolder(holder: SuperHeroViewHolder, position: Int) {
         val item = superheroList[position]
-        holder.render(item, onClickListener)
+        holder.render(item, onClickListener, onClickDelete)
     }
 
     override fun getItemCount() = superheroList.size
