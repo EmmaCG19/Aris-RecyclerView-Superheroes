@@ -9,11 +9,10 @@ import com.example.tutorecyclerviewaris.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val llmanager = LinearLayoutManager(this)
-
-    //Para modificar la lista, es necesario que la misma sea mutable
     private lateinit var adapter: SuperHeroAdapter
+    private val llmanager = LinearLayoutManager(this)
     private var superHeroMutableList: MutableList<SuperHero> =
+
         SuperHeroProvider.superheroList.toMutableList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,7 +49,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView() {
-        //Definimos un adapter para agregar o eliminar elementos
         adapter = SuperHeroAdapter(
             superheroList = superHeroMutableList,
             onClickListener = { superHero -> onItemSelected(superHero) },

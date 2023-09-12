@@ -10,7 +10,6 @@ import com.example.tutorecyclerviewaris.databinding.ItemSuperheroBinding
 class SuperHeroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val binding = ItemSuperheroBinding.bind(itemView)
 
-    //This function will be called each time the adapter needs to bind data with the viewholder
     fun render(
         superHeroModel: SuperHero,
         onClickListener: (SuperHero) -> Unit,
@@ -26,7 +25,7 @@ class SuperHeroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         }
 
         binding.btnDelete.setOnClickListener {
-            //adapterPosition is deprecated, instead of, use bindingAdapterPosition
+            //Note: adapterPosition is deprecated, use bindingAdapterPosition
             Log.d("ViewHolderSuperHero", "Adapter position selected: $bindingAdapterPosition")
             onClickDelete(bindingAdapterPosition)
         }
