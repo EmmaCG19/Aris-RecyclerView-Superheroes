@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/background_app"
     tools:context=".MainActivity">
 
@@ -10,5 +10,13 @@
         android:id="@+id/rvSuperheroes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddSuperHero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New SuperHero"
+        android:backgroundTint="@color/background_btn_add"
+        android:layout_gravity="bottom"/>
 
 </FrameLayout>
