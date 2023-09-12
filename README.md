@@ -8,7 +8,6 @@
 - MutableList
 - [Gidle](https://github.com/bumptech/glide/) 
 
-#### Demo
+### Demo
 
-<img src="https://imgur.com/2fRX3FG.gif" alt="Demonstration of app working">
-
+<img src="https://i.imgur.com/LLYdYp4.gif" alt="Demonstration of app working">
